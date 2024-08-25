@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "253959672569",
+    "project_id": "food-order-1abd6",
+    "storage_bucket": "food-order-1abd6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:253959672569:android:98d2b24585ea0f6140c828",
+        "android_client_info": {
+          "package_name": "com.dostonbek.foodadmin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwn7sNwJKBnwV0a8u0gvOAMapEFLBikSY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

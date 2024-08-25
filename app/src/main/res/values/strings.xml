@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Food Admin</string>
+    <string name="title_activity_food">FoodActivity</string>
+    <string name="title_activity_user">UserActivity</string>
+    <string name="title_activity_user_info">UserInfoActivity</string>
+    <string name="title_activity_message">MessageActivity</string>
+</resources>
