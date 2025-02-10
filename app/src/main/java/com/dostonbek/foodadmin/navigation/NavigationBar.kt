@@ -38,7 +38,6 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.dostonbek.foodadmin.R
 import com.dostonbek.foodadmin.calculation.CalculationScreen
-import com.dostonbek.foodadmin.user.UserScreen
 import com.dostonbek.foodadmin.food.FoodActivity
 import com.dostonbek.foodadmin.home.HomeScreen
 import com.dostonbek.foodadmin.message.MessageActivity
@@ -186,7 +185,6 @@ fun NavigationBar() {
         ) {
             composable("Home") { HomeScreen() }
             composable("Order") { OrdersScreen() }
-            composable("User") { UserScreen() }
             composable("Calculation"){ CalculationScreen()}
         }
     }

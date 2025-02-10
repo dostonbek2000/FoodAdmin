@@ -6,12 +6,12 @@ plugins {
 
 android {
     namespace = "com.dostonbek.foodadmin"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.dostonbek.foodadmin"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -62,6 +62,8 @@ dependencies {
     implementation(libs.androidx.material3)
     implementation(libs.firebase.database)
     implementation(libs.androidx.runtime.livedata)
+    implementation(libs.volley)
+    implementation(libs.androidx.work.runtime.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -73,4 +75,6 @@ dependencies {
     //
     implementation(libs.androidx.navigation.compose)
     implementation(libs.coil.compose)
+    //
+    implementation (libs.work.runtime.ktx.v271)
 }
