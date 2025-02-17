@@ -1,6 +1,7 @@
 package com.dostonbek.foodadmin.main
 
 import android.Manifest
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.telephony.SmsManager
@@ -11,7 +12,9 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
 import com.dostonbek.foodadmin.navigation.NavigationBar
+import com.dostonbek.foodadmin.user.FetchDataService
 import com.dostonbek.foodadmin.user.UserViewModel
+import com.dostonbek.foodadmin.user.UserViewModel.requestSMSPermission
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -25,18 +28,12 @@ class MainActivity : ComponentActivity() {
             NavigationBar()
         }
 
-        if (ContextCompat.checkSelfPermission(
-                this,
-                Manifest.permission.SEND_SMS
-            ) != PackageManager.PERMISSION_GRANTED
-        ) {
-            UserViewModel.requestSMSPermission(this)
-        }
+        requestSMSPermission(this)
 
-        // Fetch and process data from Google Sheets
-        lifecycleScope.launch {
-            UserViewModel.fetchAndProcessData(this@MainActivity)
-        }
+        // Start the foreground service
+        val serviceIntent = Intent(this, FetchDataService::class.java)
+        ContextCompat.startForegroundService(this, serviceIntent)
+
     }
 
 
